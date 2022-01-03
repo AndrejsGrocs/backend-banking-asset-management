@@ -9,7 +9,7 @@ const userDataSchema = new Schema({
       accountmoneyamount:{type:Number, required:true},
       country: {type:String, required:true},
       portfoliotype: {type:String, enum:['Aggressive', 'Defensive', 'Income', 'Speculative', 'Hybrid' ]},
-      assets:[{type:ObjectId, ref: 'UserAssets'}]
+      listofassets:[{type:ObjectId, ref: 'UserAssets'}]
 
 })
 
