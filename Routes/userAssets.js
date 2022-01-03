@@ -1,4 +1,5 @@
 const express = require('express')
+const UserAssets = require('../Models/UserAssets')
 const userAssets = require('../Models/UserAssets')
 
 const router = express.Router()
@@ -23,6 +24,32 @@ router.post('/create', async (req,res)=>{
     }
     
 })
+
+router.patch('/update/:id', async(req, res)=>{
+
+    try{
+        const asset = await UserAssets.findByIdAndUpdate(req.params.id,{
+             currencies: req.body.currencies,
+             stocks: req.body.stocks,
+             bonds: req.body.bonds,
+             etf: req.body.etf,
+             commodities: req.body.commodities,
+             futures: req.body.futures,
+        },{new:true})
+         if(!asset){
+             return res.status(404).json('Asset not found')
+             
+         }
+         return res.status(200).json({updatedAsset:asset})
+       }catch(error){
+           return res.status(500).json({message:'Error', error:error})
+           console.log(error)
+       }
+})
+
+
+
+
 
 
 module.exports = router
