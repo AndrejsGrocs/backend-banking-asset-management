@@ -1,6 +1,7 @@
 const {Schema, model, ObjectId} = require('mongoose')
 const router = require('../Routes/userRoutes')
 
+
 const userDataSchema = new Schema({
       firstname:{type:String, required:true},
       lastname:{type:String, required:true},
@@ -9,7 +10,7 @@ const userDataSchema = new Schema({
       accountmoneyamount:{type:Number, required:true},
       country: {type:String, required:true},
       portfoliotype: {type:String, enum:['Aggressive', 'Defensive', 'Income', 'Speculative', 'Hybrid' ]},
-      listofassets:[{type:ObjectId, ref: 'UserAssets'}]
+      listofassets:[{type: ObjectId, ref: 'UserAssets'}]
 
 })
 

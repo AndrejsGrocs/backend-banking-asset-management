@@ -34,7 +34,7 @@ router.get('/userdata/:_id', async(req,res)=>{
       const {params} = req
      
       try{
-         const data = await userData.findById({'_id': params._id})
+         const data = await userData.findById({'_id': params._id}).populate('listofassets')
          return res.status(200).send(data) 
      } catch(error) {
          console.log(error)
