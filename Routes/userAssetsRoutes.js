@@ -19,7 +19,7 @@ router.post('/create/:user_id', async (req,res)=>{
              futures: body.futures
         })
 
-        console.log(addAsset)
+        
 
         const user = await userData.findByIdAndUpdate(params["user_id"], {
             $push: { listofassets: addAsset._id }
@@ -67,6 +67,21 @@ router.get('/userassets', async(req, res)=>{
         return res.status(404).send('Assets data is not valid')
     }
 
+})
+
+
+router.delete('/delete/:id', async(req, res)=>{
+    try {
+        const assets = await userAssets.findByIdAndDelete(req.params.id)
+
+        if(!assets){
+            return res.status(404).json('Assets not found')
+        }
+
+        return res.status(200).json(assets)
+    } catch(error){
+        return res.status(500).json({message:'Error', error:error})
+    }
 })
 
 module.exports = router

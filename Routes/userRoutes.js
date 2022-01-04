@@ -22,7 +22,10 @@ router.post('/create', async (req,res)=>{
         })
         return res.status(200).json(addUser)
     } catch(error){
+          console.log(error)
         return res.status(404).send('Data is not valid')
+        
+       
     }
     
 })
@@ -44,5 +47,44 @@ router.get('/userdata/:_id', async(req,res)=>{
 
 })
 
+
+router.patch('/update/:id', async(req, res)=>{
+
+    try{
+        const user = await userData.findByIdAndUpdate(req.params.id,{
+             firstname: req.body.firstname,
+             lastname: req.body.lastname,
+             id: req.body.id,
+             currency: req.body.currency,
+             accountmoneyamount: req.body.accountmoneyamount,
+             country: req.body.country,
+             portfoliotype: req.body.portfoliotype,
+             listofassets: req.body.listofassets,
+        },{new:true})
+         if(!user){
+             return res.status(404).json('User not found')
+             
+         }
+
+         return res.status(200).json({updatedUser:user})
+       }catch(error){
+           return res.status(500).json('505 Data is not valid')
+           console.log(error)
+       }
+})
+
+router.delete('/delete/:id', async(req, res)=>{
+    try {
+        const user = await userData.findByIdAndDelete(req.params.id)
+
+        if(!user){
+            return res.status(404).json('User not found')
+        }
+
+        return res.status(200).json(user)
+    } catch(error){
+        return res.status(500).json({message:'Error', error:error})
+    }
+})
 
 module.exports = router
