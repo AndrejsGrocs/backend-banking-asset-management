@@ -15,7 +15,7 @@ Author: Andrejs Grocs
 
 
 You can find, edit and delete user data and assets data separately.
-Assets Data need to be connected to the User Data by ID.
+Assets Data need to be connected to the User Data by Assets ID.
 
 ## Instructions
 
@@ -40,6 +40,10 @@ DB_NAME=
 **Use the MongoDB Compass software or Mongo DB account.**
 
 [MongoDB Online](https://www.mongodb.com/)
+
+**Use the Insomnia or other similar software.**
+
+[Insomnia Online](https://insomnia.rest/)
 
 
 ## Available Operations
