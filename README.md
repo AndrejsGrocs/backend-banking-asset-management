@@ -2,24 +2,24 @@
 ![alt text](https://cdn.corporatefinanceinstitute.com/assets/asset-management.jpeg)
 
 
-# Backend Database Prototype For Banks or Asset Management Companies
+# Backend Database Prototype For Banks and Asset Management Companies
 
 
 
 ``` 
-This is a Rest API Prototype.
+This is a Rest API Database Prototype.
 Including User Data and User Assets Data.
  ```
 
 Author: Andrejs Grocs
 
 
-You can find, edit and delete userdata and assets data separately.
+You can find, edit and delete user data and assets data separately.
 Assets Data need to be connected to the User Data by ID.
 
 ## Instructions
 
-To use it you need to install node modules and dependencies:
+**To use it you need to install node modules and dependencies:**
 ```
 cors
 dotenv
@@ -28,7 +28,7 @@ mongoose
 
 ```
 
-Create .env file with
+**Create .env file with pattern:**
 ```
 B_HOST=
 DB_USER=
@@ -36,11 +36,31 @@ DB_PASS=
 DB_NAME=
 
 ```
-```
-Use the MongoDB Compass software or Mongo DB account.
-```
+
+**Use the MongoDB Compass software or Mongo DB account.**
+
+[MongoDB Online](https://www.mongodb.com/)
+
 
 ## Available Operations
+
+
+
+
+```
+   Add User
+   Add Assets
+   Find User by user ID
+   Find Assets by assets ID
+   Update User by user ID
+   Update Assets by assets ID
+   Replace users Assets by assets ID
+   Delete User by ID
+   Delete Asset by ID
+```
+
+
+## Models Description
 
 ```
    Add User
@@ -74,15 +94,7 @@ Use the MongoDB Compass software or Mongo DB account.
 ```
 
 
-```
-   Find User by user ID
-   Find Assets by assets ID
-   Update User by user ID
-   Update Assets by assets ID
-   Replace users Assets by assets ID
-   Delete User by ID
-   Delete Asset by ID
-```
+
 
 
 Andrejs Grocs 2021
