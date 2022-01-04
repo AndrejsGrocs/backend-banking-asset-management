@@ -15,7 +15,7 @@ Author: Andrejs Grocs
 
 
 You can find, edit and delete user data and assets data separately.
-Assets Data need to be connected to the User Data by Assets ID.
+Assets data need to be connected to the user data by Assets ID.
 
 ## Instructions
 
@@ -30,7 +30,7 @@ mongoose
 
 **Create .env file with pattern:**
 ```
-B_HOST=
+DB_HOST=
 DB_USER=
 DB_PASS=
 DB_NAME=
