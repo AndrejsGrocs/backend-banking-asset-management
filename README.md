@@ -20,15 +20,16 @@ You can find, edit and delete userdata and assets data separately.
 Assets Data need to be connected to the User Data by ID.
 
 ### Available Options
-```Add User
-  "firstname": "Keanu",
-  "lastname": "Reeves",
-  "id": "0000003kr",
-  "currency":"USD",
-  "accountmoneyamount": "250000",
-  "country": "USA",
-  "portfoliotype": "Defensive",
-  "listofassets": "61d40fd91a8d0bcd088cc4ab" 
+```Add User```
+
+  ```"firstname": "User First Name",```
+ ``` "lastname": "User Lastname",```
+  "id": "ID",
+  "currency":"['USD', 'EUR', 'GBP', 'JPY', 'CNY']",
+  "accountmoneyamount": "",
+  "country": "Country of Residence",
+  "portfoliotype": "['Aggressive', 'Defensive', 'Income', 'Speculative', 'Hybrid' ]",
+  "listofassets": "Assets ID (_id)" 
 
 
 
