@@ -55,13 +55,14 @@ router.patch('/update/:id', async(req, res)=>{
 })
 
 
-router.get('/userassets', async(req, res)=>{
+router.get('/userassets/:_id', async(req, res)=>{
       
+    const {params} = req
     
 
     try{
-        const userData = await userData.schema.path('listofassets').enumValues
-        return res.status(200).json(userData)
+        const assets= await userAssets.findById({'_id':params._id}).populate()
+        return res.status(200).json(assets)
     } catch(error){
         console.log(error)
         return res.status(404).send('Assets data is not valid')

@@ -73,6 +73,22 @@ router.patch('/update/:id', async(req, res)=>{
        }
 })
 
+
+router.put('/edituser/:userDataId/:userAssetsId', async(req,res)=>{
+    const {userDataId, userAssetsId} = req.params
+
+    try{
+        const user = await userData.findById(userDataId)
+        const newAsset  = await userAssets.findById(userAssetsId)
+        user.listofassets.push(newAsset)
+        user.save()
+        return res.status(200).send(user)
+    } catch(error){
+        console.log(error)
+        return res.status(404).send('User Data is not valid')
+    } 
+})
+
 router.delete('/delete/:id', async(req, res)=>{
     try {
         const user = await userData.findByIdAndDelete(req.params.id)
