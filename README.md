@@ -2,7 +2,7 @@
 ![alt text](https://cdn.corporatefinanceinstitute.com/assets/asset-management.jpeg)
 
 
-# Backend Asset Management Prototype For Banks or Asset Management Companies
+# Backend Database Prototype For Banks or Asset Management Companies
 
 
 
@@ -40,7 +40,7 @@ DB_NAME=
 Use the MongoDB Compass software or Mongo DB account.
 ```
 
-### Available Operations
+## Available Operations
 
 ```
    Add User
@@ -83,3 +83,6 @@ Use the MongoDB Compass software or Mongo DB account.
    Delete User by ID
    Delete Asset by ID
 ```
+
+
+Andrejs Grocs 2021
