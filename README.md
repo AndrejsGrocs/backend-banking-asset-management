@@ -8,10 +8,12 @@
 
 
 
-Author: Andrejs Grocs
 
-This is a Rest API Prototype. 
-Icluding User Data and User Assets Data
+
+```This is a Rest API Prototype. ```
+```Icluding User Data and User Assets Data```
+
+Author: Andrejs Grocs
 
 
 You can find, edit and delete userdata and assets data separately.
