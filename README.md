@@ -22,8 +22,8 @@ Assets Data need to be connected to the User Data by ID.
 ### Available Options
 ```Add User```
 
-  ```"firstname": "User First Name",```
- ``` "lastname": "User Lastname",```
+  "firstname": "User First Name",
+  "lastname": "User Lastname",
   "id": "ID",
   "currency":"['USD', 'EUR', 'GBP', 'JPY', 'CNY']",
   "accountmoneyamount": "",
