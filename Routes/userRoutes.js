@@ -3,7 +3,7 @@ const express = require('express')
 const userData = require('../Models/UserData')
 const userAssets = require('../Models/UserAssets')
 const controller = require('./../controllers/userController')
-
+const passport = require("passport");
 
 const router = express.Router()
 
