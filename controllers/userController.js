@@ -70,3 +70,12 @@ exports.login = async(req,res) =>{
     }
 
 }
+
+exports.logout = async(req,res)=>{
+    //Remove the httpOnly cookie
+    res.clearCookie('jwt', {
+        httpOnly:true,
+        secure: false,
+        sameSite:'lax',
+    }).json({message: 'You are logged out now.'})
+}
