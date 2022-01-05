@@ -2,6 +2,7 @@ const express = require('express')
 
 const userData = require('../Models/UserData')
 const userAssets = require('../Models/UserAssets')
+const controller = require('./../controllers/userController')
 
 
 const router = express.Router()
@@ -102,5 +103,12 @@ router.delete('/delete/:id', async(req, res)=>{
         return res.status(500).json({message:'Error', error:error})
     }
 })
+
+
+router.post('/register', controller.registerUser)
+router.post('/login', controller.login)
+
+router.get('/logout', controller.logout)
+router.use(passport.authenticate('jwt', {session:false}))
 
 module.exports = router
