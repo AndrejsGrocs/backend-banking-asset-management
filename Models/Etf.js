@@ -2,10 +2,11 @@ const {Schema, model} = require('mongoose')
 
 const userEtfSchema = new Schema({
     quantityoflots:{type:Number, required:true },
-    countryorregion:{type:String,},
+    title:{type:String, required:true},
     ticker:{type:String, required:true },
-    etftype: {type:String, required:true, enum:['Growth', 'Dividend', 'New issues', 'Defensive']},
+    countryorregion:{type:String,},   
+    etftype: {type:String, required:true, enum:['Bond', 'Stock ', 'Industry', 'Commodity']},
 })
 
-const UserEtf = model('Stocks', userEtfSchema)
+const UserEtf = model('Etf', userEtfSchema)
 module.exports = UserEtf
