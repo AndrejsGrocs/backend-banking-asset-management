@@ -4,6 +4,7 @@ const cors = require('cors')
 const dotenv = require('dotenv')
 const userRouter = require('./Routes/userRoutes')
 const assetsRouter = require('./Routes/userAssetsRoutes')
+const currenciesRouter = require('./Routes/userCurrenciesRoutes')
 
 
 const app = express()
@@ -16,6 +17,7 @@ app.use(cors())
 
 app.use('/api/users' , userRouter)
 app.use('/api/assets', assetsRouter)
+app.use('/api/assets/currencies', currenciesRouter )
 
 mongoose.connect(
     `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`

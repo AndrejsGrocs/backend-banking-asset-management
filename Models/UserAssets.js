@@ -1,8 +1,8 @@
-const {Schema, model, isValidObjectId} = require('mongoose')
+const {Schema, model, ObjectId} = require('mongoose')
 
 
 const userAssetsSchema = new Schema({
-    currencies:[{type: ObjectId, ref:'Currencies'}],
+    currencies:[{type: ObjectId, ref:'UserCurrencies'}],
     stocks: {type:String, enum:[]},
     bonds: {type:String, enum:[]},
     etf: {type:String, enum:[]},
