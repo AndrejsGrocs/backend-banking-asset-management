@@ -5,6 +5,7 @@ const dotenv = require('dotenv')
 const userRouter = require('./Routes/userRoutes')
 const assetsRouter = require('./Routes/userAssetsRoutes')
 const currenciesRouter = require('./Routes/userCurrenciesRoutes')
+const stocksRouter = require('./Routes/userStocksRoutes')
 
 
 const app = express()
@@ -18,6 +19,8 @@ app.use(cors())
 app.use('/api/users' , userRouter)
 app.use('/api/assets', assetsRouter)
 app.use('/api/assets/currencies', currenciesRouter )
+app.use('/api/assets/stocks', stocksRouter )
+
 
 mongoose.connect(
     `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`
