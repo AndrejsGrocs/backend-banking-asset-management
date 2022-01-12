@@ -5,8 +5,8 @@ const userEtfSchema = new Schema({
     title:{type:String, required:true},
     ticker:{type:String, required:true },
     countryorregion:{type:String,},   
-    etftype: {type:String, required:true, enum:['Bond', 'Stock ', 'Industry', 'Commodity']},
+    etftype: {type:String, required:true, enum:['Bond', 'Stock', 'Industry', 'Commodity']},
 })
 
-const UserEtf = model('Etf', userEtfSchema)
+const UserEtf = model('UserEtf', userEtfSchema)
 module.exports = UserEtf

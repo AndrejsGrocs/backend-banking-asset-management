@@ -1,11 +1,12 @@
 const express = require('express')
-
+const userAssets= require('../Models/UserAssets')
 const userCurrencies = require('../Models/Currencies')
+
 const router = express.Router()
 
 
 
-router.post('/create/', async(req,res)=>{
+router.post('/create', async(req,res)=>{
     const {body, params} = req
     try{
         const addCurrency = await userCurrencies.create({
@@ -16,22 +17,25 @@ router.post('/create/', async(req,res)=>{
     isreservecurrency: body.isreservecurrency,
         })
 
-        const currency = await findByIdAndUpdate(params['currency_id'], {
-        $push: {currencies: addCurrency._id}
-    })
+     /*  const currency = await userAssets.findByIdAndUpdate(params['currency_id'], {
+        $push: {currencies: addCurrency._id}  
+    }) */
     return res.status(200).json(addCurrency)
     } catch(error){
+        console.log(error)
         return res.status(404).send('Currency data is not valid')
+       
     }
 })
 
 
-router.get('/currency/:_id', async(req, res)=>{
+router.get('/currency/:id', async(req, res)=>{
        const {params} = req
     
 
     try{
-        const currency= await userCurrencies.findById({'_id':params._id}).populate()
+        
+        const currency= await userCurrencies.findById(params.id)
         return res.status(200).json(currency)
     } catch(error){
         console.log(error)

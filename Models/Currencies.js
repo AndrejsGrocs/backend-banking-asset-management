@@ -11,5 +11,5 @@ const userCurrenciesSchema = new Schema({
 })
 
 
-const UserCurrencies = model('Currencies', userCurrenciesSchema)
+const UserCurrencies = model('UserCurrencies', userCurrenciesSchema)
 module.exports = UserCurrencies

@@ -14,7 +14,7 @@ router.post('/create/', async(req,res)=>{
         bondstype:body.bondstype 
         })
 
-        const bond = await findByIdAndUpdate(params['bond_id'], {
+        const bond = await userBonds.findByIdAndUpdate(params['bond_id'], {
         $push: {bonds: addBonds._id}
     })
     return res.status(200).json(addBonds)

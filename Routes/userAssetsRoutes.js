@@ -49,8 +49,9 @@ router.patch('/update/:id', async(req, res)=>{
 
          return res.status(200).json({updatedAsset:asset})
        }catch(error){
-           return res.status(500).json('505 Data is not valid')
            console.log(error)
+           return res.status(500).json('505 Data is not valid')
+           
        }
 })
 
