@@ -8,5 +8,5 @@ const userStocksSchema = new Schema({
     stockstype: {type:String, required:true, enum:['Growth', 'Dividend', 'New issues', 'Defensive']},
 })
 
-const UserStocks = model('Stocks', userStocksSchema)
+const UserStocks = model('UserStocks', userStocksSchema)
 module.exports = UserStocks

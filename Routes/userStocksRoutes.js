@@ -14,9 +14,9 @@ router.post('/create/', async(req,res)=>{
         stockstype:body.stockstype 
         })
 
-        const stock = await findByIdAndUpdate(params['stock_id'], {
+ /*        const stock = await findByIdAndUpdate(params['stock_id'], {
         $push: {stocks: addStocks._id}
-    })
+    }) */
     return res.status(200).json(addStocks)
     } catch(error){
         return res.status(404).send('Stocks data is not valid')
@@ -29,10 +29,10 @@ router.get('/stock/:_id', async(req, res)=>{
     
 
     try{
-        const stock= await userStocks.findById({'_id':params._id}).populate()
+        const stock= await userStocks.findById(params.id)
         return res.status(200).json(stock)
     } catch(error){
-        console.log(error)
+      
         return res.status(404).send('Stocks data is not valid')
     }
 
