@@ -54,13 +54,25 @@ DB_NAME=
 ```
    Add User
    Add Assets
+   Add Currency
+   Add Stocks
+   Add Bonds
+   Add Etf
    Find User by user ID
    Find Assets by assets ID
+   Find Currency by currency ID
+   Find Stocks by stock ID
+   Find Bonds by bond ID
+   Find Etfs by etf ID
    Update User by user ID
    Update Assets by assets ID
    Replace users Assets by assets ID
    Delete User by ID
-   Delete Asset by ID
+   Delete Assets by ID
+   Delete Currency by ID
+   Delete Stocks by ID
+   Delete Bonds by ID
+   Delete Etfs by ID
 ```
 
 
