@@ -29,7 +29,7 @@ router.get('/stock/:_id', async(req, res)=>{
     
 
     try{
-        const stock= await userStocks.findById(params.id)
+        const stock= await userStocks.findById(params._id)
         return res.status(200).json(stock)
     } catch(error){
       
