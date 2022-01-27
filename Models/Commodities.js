@@ -7,5 +7,5 @@ const userComSchema = new Schema({
     
 })
 
-const UserCom = model('Commodities', userComSchema)
-module.exports = UserCom
+const UserCommodities = model('UserCommodities', userComSchema)
+module.exports = UserCommodities

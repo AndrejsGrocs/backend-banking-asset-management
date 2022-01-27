@@ -6,7 +6,7 @@ const userAssetsSchema = new Schema({
     stocks: [{type: ObjectId, ref:'UserStocks'}],
     bonds: [{type: ObjectId, ref:'UserBonds'}],
     etf: [{type: ObjectId, ref:'UserEtf'}],
-    commodities: {type:String},
+    commodities: [{type: ObjectId, ref:'UserCommodities'}],
     futures: {type:String},
 
 
