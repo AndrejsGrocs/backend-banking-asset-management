@@ -9,7 +9,8 @@
 ``` 
 This is a Rest API Database Prototype.
 Including User Data and User Assets Data.
-User Assets Data have a list of assets, and every asset in the list have a different model with different assets data.
+User Assets Data have a list of assets, and every asset in the list have a different model
+ with different assets data.
  ```
 
 Author: Andrejs Grocs
