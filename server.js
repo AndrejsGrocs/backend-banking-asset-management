@@ -9,6 +9,7 @@ const stocksRouter = require('./Routes/userStocksRoutes')
 const bondsRouter = require('./Routes/userBondsRoutes')
 const etfsRouter = require('./Routes/userEtfRoutes')
 const commoditiesRouter = require("./Routes/userCommoditiesRoutes")
+const futuresRouter = require("./Routes/userFuturesRoutes")
 
 
 const app = express()
@@ -26,6 +27,7 @@ app.use('/api/assets/stocks', stocksRouter )
 app.use('/api/assets/bonds', bondsRouter )
 app.use('/api/assets/etfs', etfsRouter )
 app.use('/api/assets/commodities', commoditiesRouter )
+app.use('/api/assets/futures', futuresRouter )
 
 
 mongoose.connect(
