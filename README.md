@@ -12,13 +12,14 @@ Including User Data and User Assets Data.
 User Assets Data have a list of assets, and every asset 
 in the list has different model with different 
 detailed data especially about this asset.
+You can find, edit and delete user data and assets data separately.
+Assets data need to be connected to the user data by Assets ID.
  ```
 
 Author: Andrejs Grocs
 
 
-You can find, edit and delete user data and assets data separately.
-Assets data need to be connected to the user data by Assets ID.
+
 
 ## Instructions
 
