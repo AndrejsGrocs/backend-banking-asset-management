@@ -207,6 +207,20 @@ after all asset data is filled.
 
 ```
 
+```
+
+  Add data to any of asset
+  Example
+  Stocks Data
+
+
+    quantityoflots: "Amount of lots client have",
+    title: "Name of the stock",
+    ticker: "Stock Ticker",
+    issuer: "The name of issuer of this stocks",
+    stockstype: "Type of stock , options: ['Growth', 'Dividend', 'New issues', 'Defensive']},
+```
+
 
 
 
