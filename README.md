@@ -210,6 +210,8 @@ after all assets data is filled.
 ```
 
   Add data to any of asset
+  Any asset type has a different schema.
+
   Example
   Stocks Data
 
