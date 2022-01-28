@@ -9,8 +9,7 @@
 ``` 
 This is a Rest API Database Prototype.
 Including User Data and User Assets Data.
-User Assets Data have a list of assets, and every asset in the list have a different model
- with different assets data.
+User Assets Data have a list of assets, and every asset in the list has different model with different detailed data especially about this asset.
  ```
 
 Author: Andrejs Grocs
@@ -60,23 +59,116 @@ DB_NAME=
    Add Stocks
    Add Bonds
    Add Etf
+   Add Commodities
+   Add Futures
    Find User by user ID
    Find Assets by assets ID
    Find Currency by currency ID
    Find Stocks by stock ID
    Find Bonds by bond ID
    Find Etfs by etf ID
+   Find Commodities by etf ID
+   Find Futures by etf ID
    Update User by user ID
    Update Assets by assets ID
-   Replace users Assets by assets ID
+   Replace users Assets with another assets ID
    Delete User by ID
    Delete Assets by ID
    Delete Currency by ID
    Delete Stocks by ID
    Delete Bonds by ID
    Delete Etfs by ID
+   Delete Commodtities by ID
+   Delete Futures by ID
 ```
 
+## Example of the result you can receive
+
+```
+Here is the example of data you can receive on the screen 
+after all asset data is filled.
+
+
+{
+  "_id": "61de9ec92a048d0f66baaa85",
+  "firstname": "Andrejs",
+  "lastname": "Grocs",
+  "id": "0000001ag",
+  "currency": "EUR",
+  "accountmoneyamount": 500000,
+  "country": "Germany",
+  "portfoliotype": "Income",
+  "listofassets": [
+    {
+      "_id": "61f3ae9ac7ec752d3d95866c",
+      "currencies": [
+        {
+          "_id": "61de96eb616035725de49238",
+          "quantityoflots": 4,
+          "title": "Euro",
+          "ticker": "EUR",
+          "countryofissuer": "EU",
+          "isreservecurrency": "Yes",
+          "__v": 0
+        }
+      ],
+      "stocks": [
+        {
+          "_id": "61dee1df627024ec515f36d8",
+          "quantityoflots": 4,
+          "title": "Test Incfdsdbgdf",
+          "ticker": "TEST",
+          "issuer": "Test Inc",
+          "stockstype": "Growth",
+          "__v": 0
+        }
+      ],
+      "bonds": [
+        {
+          "_id": "61deaeb2bec710ac0f7ab67b",
+          "quantityoflots": 3,
+          "title": "Test Bond",
+          "ticker": "Test",
+          "issuer": "Test Government",
+          "bondstype": "Government",
+          "__v": 0
+        }
+      ],
+      "etf": [
+        {
+          "_id": "61dea640600b067f92302a7a",
+          "quantityoflots": 3,
+          "title": "SPDR S&P 500 ETF Trust",
+          "ticker": "Spy",
+          "countryorregion": "USA",
+          "etftype": "Stock",
+          "__v": 0
+        }
+      ],
+      "commodities": [
+        {
+          "_id": "61f2a999d10a05bc01ed32e6",
+          "quantityoflots": 12,
+          "title": "Oil",
+          "ticker": "Brant",
+          "__v": 0
+        }
+      ],
+      "futures": [
+        {
+          "_id": "61f3ab89ecc73ebb23da2a5a",
+          "quantityoflots": 12345,
+          "title": "S&P 500 Futures ",
+          "ticker": "E-Mini S&P 500",
+          "__v": 0
+        }
+      ],
+      "__v": 0
+    }
+  ],
+  "__v": 2
+}
+```
 
 ## Models Description
 
