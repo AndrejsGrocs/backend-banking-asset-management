@@ -81,7 +81,7 @@ DB_NAME=
    Delete Stocks by ID
    Delete Bonds by ID
    Delete Etfs by ID
-   Delete Commodtities by ID
+   Delete Commodities by ID
    Delete Futures by ID
 ```
 
@@ -89,7 +89,7 @@ DB_NAME=
 
 ```
 Here is the example of data you can receive on the screen 
-after all asset data is filled.
+after all assets data is filled.
 
 
 {
