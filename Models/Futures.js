@@ -9,5 +9,5 @@ const userFuturesSchema = new Schema({
 })
 
 
-const UserFutures = model('Currencies', userFuturesSchema)
+const UserFutures = model('UserFutures', userFuturesSchema)
 module.exports = UserFutures
