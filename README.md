@@ -118,10 +118,10 @@ after all asset data is filled.
       "stocks": [
         {
           "_id": "61dee1df627024ec515f36d8",
-          "quantityoflots": 4,
-          "title": "Test Incfdsdbgdf",
-          "ticker": "TEST",
-          "issuer": "Test Inc",
+          "quantityoflots": 5,
+          "title": "Aaple Inc",
+          "ticker": "AAPL",
+          "issuer": "Aaple Inc",
           "stockstype": "Growth",
           "__v": 0
         }
@@ -130,9 +130,9 @@ after all asset data is filled.
         {
           "_id": "61deaeb2bec710ac0f7ab67b",
           "quantityoflots": 3,
-          "title": "Test Bond",
-          "ticker": "Test",
-          "issuer": "Test Government",
+          "title": "US Government Bond 10 YR Yield",
+          "ticker": "US10Y",
+          "issuer": "US Government",
           "bondstype": "Government",
           "__v": 0
         }
@@ -152,17 +152,17 @@ after all asset data is filled.
         {
           "_id": "61f2a999d10a05bc01ed32e6",
           "quantityoflots": 12,
-          "title": "Oil",
-          "ticker": "Brant",
+          "title": "WisdomTree Bloomberg Brent Crude Oil",
+          "ticker": "BRNT",
           "__v": 0
         }
       ],
       "futures": [
         {
           "_id": "61f3ab89ecc73ebb23da2a5a",
-          "quantityoflots": 12345,
+          "quantityoflots": 12,
           "title": "S&P 500 Futures ",
-          "ticker": "E-Mini S&P 500",
+          "ticker": "ES1:IND",
           "__v": 0
         }
       ],
